@@ -1,0 +1,36 @@
+from random import randint
+print("Привет! Отгадай число от 1 до 6")
+a = 1
+ochki = []
+point = 1
+while a <= 5:
+  chisla = randint(1, 6)
+  a += 1
+  c = randint (1,6)
+  d = int(input("Введите число "))
+  e = abs (d - c)
+  print (c)
+  if e == 0:
+    point = 6
+    ochki.append(point)
+  elif e == 1:
+    point = 5
+    ochki.append(point)
+  elif e == 2:
+    point = 4
+    ochki.append(point)
+  elif e == 3:
+    point = 3
+    ochki.append(point)
+  elif e == 4:
+    point = 2
+    ochki.append(point)
+  elif e == 5:
+    point = 1 
+    ochki.append(point) 
+i = sum (ochki)
+if i < 25:
+  print("Вы проиграли")
+elif i > 25:
+  print("Вы выиграли")
+print("Ваше количество очков: ", i)
